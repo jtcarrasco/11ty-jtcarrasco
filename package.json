@@ -1,14 +1,14 @@
 {
-  "name": "11ty-sass",
+  "name": "jtcarrasco",
   "version": "1.0.0",
-  "description": "11ty starter template with SASS support and Dark Mode.",
+  "description": "The website of jtcarrasco",
   "keywords": [
     "11ty",
     "SASS",
     "SCSS",
     "eleventy"
   ],
-  "author": "Nikita Zanella",
+  "author": "Jason Carrasco",
   "license": "ISC",
   "scripts": {
     "watch:sass": "node-sass --watch src/sass -o src/css",
@@ -19,8 +19,19 @@
     "build": "npm-run-all build:sass --parallel build:*"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5"
-  }
+  },
+  "main": ".eleventy.js",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtcarrasco/11ty-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jtcarrasco/11ty-practice/issues"
+  },
+  "homepage": "https://github.com/jtcarrasco/11ty-practice#readme"
 }

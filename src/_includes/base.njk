@@ -8,13 +8,13 @@
   </head>
   <body id="nightModeDiv" class="">
 
-    {% include components/navbar.njk %}
+    {% include "components/navbar.njk" %}
 
     <main>
       {{ content | safe }}
     </main>
 
-    {% include components/footer.njk %}
+    {% include "components/footer.njk" %}
 
 
     <script src="{{ '/js/script.js' | url }}"></script>
