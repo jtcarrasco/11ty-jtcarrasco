@@ -1,5 +1,6 @@
 ---
 title: This is the second example post
+tags: "post"
 image: /assets/_blog/article-2.jpg
 imageAlt: This is a test
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

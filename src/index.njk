@@ -4,7 +4,38 @@ pageTitle: "Jason Carrasco"
 layout: "base.njk"
 ---
 
-<section class="content-container">
-  <h1 class="section-title">I'm {{ pageTitle }}</h1>
-  <div class="section-text section-large">A Designer and Developer (at least I play one on the Internet) from Southern California. Currently I work for the great people at <a href="https://www.edlio.com">edlio.com.</a>  I like <a href="https://www.instagram.com/salt_hank/?hl=en">sammiches</a>, <a href="/pets">pets</a>, <a href="https://www.reddit.com/r/mechmarket/">keyboards</a>, <a href="https://www.discogs.com/user/jtcarrasco">vinyl</a> and playing <a href="https://youtu.be/K4MhCvraJeE">“coyote guy”</a> with my Kiddo.</div>
-</section>
+<div id="row_main" class="homepage-row">
+  <section id="homepage_content" class="homepage_content content-container">
+    <h1 class="section-title">I'm {{ pageTitle }}</h1>
+    <div class="section-text section-large">A Designer and Developer (at least I play one on the Internet) from Southern California. Currently I work for the great people at <a href="https://www.edlio.com">edlio.com</a>.  I like <a href="https://www.instagram.com/salt_hank/?hl=en">sammiches</a>, <a href="/pets">pets</a>, <a href="https://www.reddit.com/r/mechmarket/">keyboards</a>, <a href="https://www.discogs.com/user/jtcarrasco">Vinyl</a> and playing <a href="https://youtu.be/K4MhCvraJeE">“coyote guy”</a> with my Kiddo.
+  </section>
+
+  <section id="homepage_projects" class="homepage_projects content-container">
+    <img class="profile-image" src="/assets/_blog/article-5.jpg">
+    <h4 class="section-title-sub"> Thingys I've worked on:</h4>
+    <ul role="list" class="list">
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+      <li class="list-item"><a href="https://www.rowlandschools.org/" target="_blank" class="item-link">Rowland Unified School District</a></li>
+    </ul>
+  </section>
+</div>
+
+
+{# <section id="homepage-content" class="content-container">
+  <h1 class="section-title">{{ pageTitle }}</h1>
+  <ul role="list" class="articles-list">
+    {%- for post in collections.featured | reverse -%}
+
+    {% include 'components/article-snippet.njk' %}
+
+    {%- endfor -%}
+  </ul>
+</section> #}

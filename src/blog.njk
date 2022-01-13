@@ -6,7 +6,7 @@ layout: "base.njk"
 
 <section class="content-container blog-list">
   <h1 class="section-title">{{ pageTitle }}</h1>
-  <ul role="list" class="articles-list flow">
+  <ul role="list" class="list">
     {%- for post in collections.post | reverse -%}
 
     {% include 'components/article-snippet.njk' %}

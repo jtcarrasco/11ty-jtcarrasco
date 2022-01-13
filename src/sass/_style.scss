@@ -145,6 +145,14 @@ body {
       }
     }
 
+    .section-title-sub {
+      @include scale-font($small-ratio: .75, $final-size: 1.13rem);
+      font: {
+        family: $secondary-font;
+        weight: 700;
+      }
+    }
+
     .section-large {
       @include scale-font($small-ratio: .75, $final-size: 2rem);
       line-height: 2.5rem;
@@ -152,25 +160,107 @@ body {
 
     .section-text {
       a {
-        &:nth-child(1) { color: $red-fox; }
-        &:nth-child(2) { color: $agent-orange; }
-        &:nth-child(3) { color: $al-green; }
+        &:nth-child(1) {
+          padding: 0 .05em;
+          text-decoration: none;
+          font-weight: 700;
+          color: $red-fox;
+          @include hover {
+            color: #000000;
+            background-color: $red-fox;
+          }
+        }
+        &:nth-child(2) {
+          padding: 0 .05em;
+          text-decoration: none;
+          font-weight: 700;
+          color: $yellow-ono;
+          @include hover {
+            color: #000000;
+            background-color: $yellow-ono;
+          }
+        }
+        &:nth-child(3) {
+          padding: 0 .05em;
+          text-decoration: none;
+          font-weight: 700;
+          color: $agent-orange;
+          @include hover {
+            color: #000000;
+            background-color: $agent-orange;
+          }
+        }
+        &:nth-child(4) {
+          padding: 0 .05em;
+          text-decoration: none;
+          font-weight: 700;
+          color: $al-green;
+          @include hover {
+            color: #000000;
+            background-color: $al-green;
+          }
+        }
+        &:nth-child(5) {
+          padding: 0 .05em;
+          text-decoration: none;
+          font-weight: 700;
+          color: $frost-one;
+          @include hover {
+            color: #000000;
+            background-color: $frost-one;
+          }
+        }
+        &:nth-child(6) {
+          padding: 0 .05em;
+          text-decoration: none;
+          font-weight: 700;
+          color: $frost-two;
+          @include hover {
+            color: #000000;
+            background-color: $frost-two;
+          }
+        }
       }
     }
+
+    .list {
+      @include stripped-list;
+    }
+
   }
 
+/*************/
+//homepage content
+/*************/
+
+#row_main {
+  @include width-constrain;
+  display: grid;
+  @include respond-to($vp-mid) {
+    grid-template-areas: "content content list";
+  }
+}
+
+.homepage_projects {
+  @include flex-all($direction:column,$justify:center);
+  .profile-image { width: 100%; }
+  @include respond-to($vp-mid) {
+    margin: 2em 0;
+    border-left: 1px $jack-white dashed;
+
+    .profile-image { max-width: 230px; }
+  }
+}
 /*************/
 //blog
 /*************/
 
   .blog-list {
+    @include width-constrain;
     display: grid;
     gap: 1rem;
 
-    .articles-list {
-      @include width-constrain;
-      @include stripped-list;
-    }
+    .list { @include width-constrain; }
 
     .article {
       @include flex-all($direction:column,$justify:space-between);

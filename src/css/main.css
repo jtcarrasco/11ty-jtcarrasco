@@ -40,6 +40,8 @@ body {
   /*************/
   /*************/
   /*************/
+  /*************/
+  /*************/
   /*************/ }
   body .btn {
     cursor: pointer;
@@ -118,6 +120,16 @@ body {
       @media screen and (min-width: 1024px) {
         body .content-container .section-title {
           font-size: 2rem; } }
+    body .content-container .section-title-sub {
+      font-size: 0.8475rem;
+      font-family: "Bree Serif", serif;
+      font-weight: 700; }
+      @media screen and (min-width: 768px) {
+        body .content-container .section-title-sub {
+          font-size: 0.8475rem; } }
+      @media screen and (min-width: 1024px) {
+        body .content-container .section-title-sub {
+          font-size: 1.13rem; } }
     body .content-container .section-large {
       font-size: 1.5rem;
       line-height: 2.5rem; }
@@ -128,23 +140,93 @@ body {
         body .content-container .section-large {
           font-size: 2rem; } }
     body .content-container .section-text a:nth-child(1) {
+      padding: 0 .05em;
+      text-decoration: none;
+      font-weight: 700;
       color: #bf616a; }
+      body .content-container .section-text a:nth-child(1):hover, body .content-container .section-text a:nth-child(1):focus {
+        color: #000000;
+        background-color: #bf616a; }
     body .content-container .section-text a:nth-child(2) {
-      color: #d08770; }
+      padding: 0 .05em;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ebcb8b; }
+      body .content-container .section-text a:nth-child(2):hover, body .content-container .section-text a:nth-child(2):focus {
+        color: #000000;
+        background-color: #ebcb8b; }
     body .content-container .section-text a:nth-child(3) {
+      padding: 0 .05em;
+      text-decoration: none;
+      font-weight: 700;
+      color: #d08770; }
+      body .content-container .section-text a:nth-child(3):hover, body .content-container .section-text a:nth-child(3):focus {
+        color: #000000;
+        background-color: #d08770; }
+    body .content-container .section-text a:nth-child(4) {
+      padding: 0 .05em;
+      text-decoration: none;
+      font-weight: 700;
       color: #a3be8c; }
+      body .content-container .section-text a:nth-child(4):hover, body .content-container .section-text a:nth-child(4):focus {
+        color: #000000;
+        background-color: #a3be8c; }
+    body .content-container .section-text a:nth-child(5) {
+      padding: 0 .05em;
+      text-decoration: none;
+      font-weight: 700;
+      color: #8fbcbb; }
+      body .content-container .section-text a:nth-child(5):hover, body .content-container .section-text a:nth-child(5):focus {
+        color: #000000;
+        background-color: #8fbcbb; }
+    body .content-container .section-text a:nth-child(6) {
+      padding: 0 .05em;
+      text-decoration: none;
+      font-weight: 700;
+      color: #88c0d0; }
+      body .content-container .section-text a:nth-child(6):hover, body .content-container .section-text a:nth-child(6):focus {
+        color: #000000;
+        background-color: #88c0d0; }
+    body .content-container .list {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+  body #row_main {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1024px;
+    display: grid; }
+    @media screen and (min-width: 768px) {
+      body #row_main {
+        grid-template-areas: "content content list"; } }
+  body .homepage_projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    body .homepage_projects .profile-image {
+      width: 100%; }
+    @media screen and (min-width: 768px) {
+      body .homepage_projects {
+        margin: 2em 0;
+        border-left: 1px #d8dee9 dashed; }
+        body .homepage_projects .profile-image {
+          max-width: 230px; } }
   body .blog-list {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1024px;
     display: grid;
     gap: 1rem; }
-    body .blog-list .articles-list {
+    body .blog-list .list {
       box-sizing: border-box;
       margin-left: auto;
       margin-right: auto;
       width: 100%;
-      max-width: 1024px;
-      margin: 0;
-      padding: 0;
-      list-style: none; }
+      max-width: 1024px; }
     body .blog-list .article {
       display: flex;
       flex-direction: column;
