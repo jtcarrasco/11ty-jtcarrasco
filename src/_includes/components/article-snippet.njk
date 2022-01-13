@@ -1,10 +1,12 @@
-  <li>
+  <li class="article-item">
     <article class="article">
-      <h3 class="article-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
       <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="article-image">
-      <div class="article-body">
-        {{ post.data.description }}
+      <div class="article-summary">
+        <h3 class="article-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <div class="article-body">
+          {{ post.data.description }}
+        </div>
+        <a class="article-button btn" href="{{ post.url }}">Continue Reading</a>
       </div>
-      <a class="article-button btn btn-primary" href="{{ post.url }}">Continue Reading</a>
     </article>
   </li>

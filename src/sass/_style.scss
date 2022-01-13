@@ -4,14 +4,17 @@
   color: $jack-white;
   background-color: $jack-black;
 
-  a { color: $agent-orange; }
-
-  .sitenav {
+  #header {
     border-color: $jack-white;
     .sitenav-inner {
       .logo { fill: $jack-white; }
 
-      .nav-list a { color: $jack-white; }
+      .nav-list a {
+        color: $jack-white;
+        @include hover  {
+          color: $jack-black;
+        }
+      }
 
       .night-mode-btn svg { fill: $jack-white; }
 
@@ -19,7 +22,21 @@
     }
   }
 
-  .footer {
+  #homepage_projects {
+    @include respond-to($vp-mid) {
+      border-color: $jack-white;
+    }
+  }
+
+  #blog {
+    .article-title a { color: $jack-white; }
+    .article-item {
+      border-color: $jack-white;
+    }
+  }
+
+
+  #footer {
     border-color: $jack-white;
     .footer-inner {
       .social-nav .logo { fill: $jack-white; }
@@ -27,299 +44,260 @@
   }
 }
 
+/*************/
+//Global Utilities
+/*************/
 
-
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+#content_main {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
   padding: 0;
-  font: {
-    size: 1.13rem;
-    family: $primary-font;
-    weight: 400;
-  }
-  color: $jack-black;
-  background-color: $jack-white;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+.homepage-row { @include width-constrain; }
 
-/*************/
-///buttons
-/*************/
+.content-container {
+  @include width-constrain;
+  padding: 0.75rem;
 
-  .btn {
-    cursor: pointer;
-    padding: 0.75em 1.75em;
-    border-radius: 0.25em;
-
-    &-primary {
-      align-self: flex-start;
-      background: $frost-two;
-      color: $jack-black;
-      font-weight: 700;
-      @include hover  {
-        text-decoration: none;
-        color: $jack-white-two;
-        background: $jack-black-four;
-      }
-    }
-  }
-
-/*************/
-//header
-/*************/
-
-  .sitenav {
-    width: 100%;
-    border-bottom: 1px dashed $jack-black;
-
-    &-inner {
-      @include width-constrain;
-      @include flex-all($direction: column, $justify:center,$align:center);
-      padding: 0.75rem;
-
-      .logo {
-        margin: 0;
-        width: 60px;
-        fill: $jack-black;
-      }
-
-      .nav-list {
-        display: flex;
-        align-items: center;
-
-        a {
-          margin-right: 2rem;
-          text-decoration: none;
-          color: $jack-black;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
-      .night-mode-btn {
-        color: $jack-black;
-        background-color: transparent;
-        border: none;
-
-        svg {
-          fill: $jack-black;
-          width: 60px;
-        }
-      }
-
-    }
-    @include respond-to($vp-mid) {
-      &-inner {
-        @include flex-all($direction: row, $justify:space-between);
-      }
-    }
-  }
-
-/*************/
-//content
-/*************/
-
-  #content_main {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .content-container {
-    @include width-constrain;
-    padding: 0.75rem;
-
-    .section-title {
+  .section {
+    &-title {
       @include scale-font($small-ratio: .75, $final-size: 2rem);
+      margin: 1.5em 0;
       font: {
         family: $secondary-font;
         weight: 700;
       }
     }
-
-    .section-title-sub {
+    &-title-sub {
       @include scale-font($small-ratio: .75, $final-size: 1.13rem);
       font: {
         family: $secondary-font;
         weight: 700;
       }
     }
-
-    .section-large {
-      @include scale-font($small-ratio: .75, $final-size: 2rem);
+    &-large {
+      @include scale-font($small-ratio: .75, $final-size: 1.8rem);
       line-height: 2.5rem;
     }
+    &-text { font-size: 1.13rem; }
+  }
+}
 
-    .section-text {
+.btn {
+  cursor: pointer;
+  padding: 0.75em 1.75em;
+  border-radius: 0.25em;
+  align-self: flex-start;
+  text-decoration: none;
+  background: $red-fox;
+  color: $jack-white;
+  font-weight: 700;
+  @include hover  {
+    color: $jack-black;
+    background: $yellow-ono;
+  }
+}
+
+.my-link {
+  a {
+    padding: 0 .08em;
+    border-radius: 0.25em;
+    text-decoration: none;
+    font-weight: 700;
+    color: $red-fox;
+    @include hover {
+      color: $jack-black;
+      background-color: $yellow-ono;
+    }
+  }
+}
+
+
+/*************/
+//header
+/*************/
+
+#header {
+  width: 100%;
+  border-bottom: 1px dashed $jack-black;
+
+  .sitenav-inner {
+    @include width-constrain;
+    @include flex-all($direction: column, $justify:center,$align:center);
+    padding: 0.75rem;
+
+    .logo {
+      margin: 0;
+      width: 60px;
+      fill: $jack-black;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+
       a {
-        &:nth-child(1) {
-          padding: 0 .05em;
-          text-decoration: none;
-          font-weight: 700;
-          color: $red-fox;
-          @include hover {
-            color: #000000;
-            background-color: $red-fox;
-          }
-        }
-        &:nth-child(2) {
-          padding: 0 .05em;
-          text-decoration: none;
-          font-weight: 700;
-          color: $yellow-ono;
-          @include hover {
-            color: #000000;
-            background-color: $yellow-ono;
-          }
-        }
-        &:nth-child(3) {
-          padding: 0 .05em;
-          text-decoration: none;
-          font-weight: 700;
-          color: $agent-orange;
-          @include hover {
-            color: #000000;
-            background-color: $agent-orange;
-          }
-        }
-        &:nth-child(4) {
-          padding: 0 .05em;
-          text-decoration: none;
-          font-weight: 700;
-          color: $al-green;
-          @include hover {
-            color: #000000;
-            background-color: $al-green;
-          }
-        }
-        &:nth-child(5) {
-          padding: 0 .05em;
-          text-decoration: none;
-          font-weight: 700;
-          color: $frost-one;
-          @include hover {
-            color: #000000;
-            background-color: $frost-one;
-          }
-        }
-        &:nth-child(6) {
-          padding: 0 .05em;
-          text-decoration: none;
-          font-weight: 700;
-          color: $frost-two;
-          @include hover {
-            color: #000000;
-            background-color: $frost-two;
-          }
-        }
+        margin-right: 2rem;
+        text-decoration: none;
+        color: $jack-black;
       }
     }
 
-    .list {
-      @include stripped-list;
+    .night-mode-btn {
+      cursor: pointer;
+      color: $jack-black;
+      background-color: transparent;
+      border: none;
+
+      svg {
+        fill: $jack-black;
+        width: 60px;
+      }
     }
 
   }
+  @include respond-to($vp-mid) {
+    .sitenav-inner {
+      @include flex-all($direction: row, $justify:space-between);
+    }
+  }
+}
 
 /*************/
 //homepage content
 /*************/
 
 #row_main {
-  @include width-constrain;
-  display: grid;
+  align-items: flex-start;
+  .section-large:first-of-type { margin-bottom: 1.25em; }
+}
+
+#row_about {
+  .article { display: flow-root; }
+  img {
+    max-width: 300px;
+  }
   @include respond-to($vp-mid) {
-    grid-template-areas: "content content list";
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    img {
+      float: left;
+      margin: 0 1em 1em 0;
+    }
   }
 }
 
-.homepage_projects {
-  @include flex-all($direction:column,$justify:center);
-  .profile-image { width: 100%; }
+#homepage_content {
+  p { margin-bottom: 1.5em; }
+  @include respond-to($vp-mid) {
+    grid-column: 1 / span 2;
+  }
+}
+
+#homepage_projects {
+  @include flex-all($direction:column);
+  grid-column: 3;
+  .list-item { margin: .8em 0 0 0; }
   @include respond-to($vp-mid) {
     margin: 2em 0;
-    border-left: 1px $jack-white dashed;
-
-    .profile-image { max-width: 230px; }
+    border-left: 1px $jack-black dashed;
   }
 }
-/*************/
-//blog
-/*************/
 
-  .blog-list {
-    @include width-constrain;
+.homepage-lists {
+  .list {
     display: grid;
-    gap: 1rem;
+    .list-item a {
+      font-size: clamp(.75%, 2rem, 3rem);
+      font: {
+        family: $secondary-font;
+        weight: 700;
+      }
+    }
+  }
+  @include respond-to($vp-mid) {
+    .list { grid-template-columns: repeat(2, 1fr); }
+  }
+}
 
-    .list { @include width-constrain; }
+/*************/
+//blog content
+/*************/
 
-    .article {
-      @include flex-all($direction:column,$justify:space-between);
-      padding: 1em 0;
-      margin-bottom: 1em;
-      border-bottom: 1px dashed $jack-black;
-      &-title {
-        @include scale-font($small-ratio: .75, $final-size: 2rem);
-        padding: 0 0 1em 0;
-        margin: 0;
-        a {
-          color: $jack-black;
-          text-decoration: none;
-          @include hover  {
-            color: $al-green;
-          }
+#blog {
+  display: grid;
+  gap: 1rem;
+
+  .article-item {
+    border-bottom: 1px dashed $jack-black;
+    &:last-child { border-bottom: 0px dashed transparent;}
+  }
+
+  .article {
+    @include flex-all($direction:column,$justify:center,$align:center);
+    padding: 1em 0;
+    &-summary {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      margin: 0;
+      a {
+        color: $jack-black;
+        text-decoration: none;
+        @include hover  {
+          color: $al-green;
         }
       }
-      &-image { border-radius: .25em; }
-      &-body {
-        padding: 1em 0;
-        font-size: 1.13rem;
-      }
-      // &:last-child {
-      //   border-bottom: 0px solid transparent;
-      // }
     }
-
-
+    &-image { border-radius: .25em; }
+    &-body {
+      padding: 0 0 1em 0;
+      font-size: 1.13rem;
+    }
   }
+  @include respond-to($vp-mid) {
+    .article {
+      @include flex-all($direction:row,$align:flex-start);
+      &-image { max-width: $vp-small; }
+      &-summary { margin-left: 1em; }
+    }
+  }
+}
 
 /*************/
 //footer
 /*************/
 
-  .footer {
-    width: 100%;
-    border-top: 1px dashed $jack-black;
-    &-inner {
-      @include width-constrain;
-      @include flex-all($direction: column, $align:center);
-      padding: 0.75rem;
-      .social-nav {
-        @include flex-all($justify:center,$align:center);
-        .logo {
-          width: 40px;
-          margin: 0 .5em;
-          fill: $jack-black;
-        }
-      }
-      .copyright {
-        text-align: center;
+#footer {
+  width: 100%;
+  border-top: 1px dashed $jack-black;
+  .footer-inner {
+    @include width-constrain;
+    @include flex-all($direction: column, $align:center);
+    padding: 0.75rem;
+    .social-nav {
+      @include flex-all($justify:center,$align:center);
+      .logo {
+        width: 40px;
+        margin: 0 .5em;
+        fill: $jack-black;
       }
     }
-    @include respond-to($vp-mid) {
-      &-inner {
-        @include flex-all($direction: row, $justify:space-between);
-        .copyright { margin-left: auto; }
-      }
+    .copyright {
+      text-align: center;
+    }
+  }
+  @include respond-to($vp-mid) {
+    .footer-inner {
+      @include flex-all($direction: row, $justify:space-between);
+      .copyright { margin-left: auto; }
     }
   }
 }

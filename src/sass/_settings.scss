@@ -7,25 +7,29 @@ $vp-max					: 1350px;
 $site-width				: $vp-large;
 
 //colors
-$jack-white: #d8dee9;
-$jack-white-one: #e5e9f0;
-$jack-white-two: #eceff4;
 
-$jack-black: #2e3440;
+$jack-white: #ffffff;
+$jack-white-one: #d8dee9;
+$jack-white-two: #e5e9f0;
+$jack-white-three: #eceff4;
+
+$jack-black: #000000;
+$jack-black-one: #2e3440;
 $jack-black-two: #3b4252;
 $jack-black-three: #434c5e;
 $jack-black-four: #4c566a;
-
-$frost-one: #8fbcbb;
-$frost-two: #88c0d0;
-$frost-three: #81a1c1;
-$frost-four: #5e81ac;
 
 $red-fox: #bf616a;
 $yellow-ono: #ebcb8b;
 $agent-orange: #d08770;
 $al-green: #a3be8c;
 $purple-rain: #b48ead;
+
+$nord-one: #8fbcbb;
+$nord-two: #88c0d0;
+$nord-three: #81a1c1;
+$nord-four: #5e81ac;
+
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');

@@ -4,10 +4,10 @@ pageTitle: "Blog"
 layout: "base.njk"
 ---
 
-<section class="content-container blog-list">
+<section id="blog" class="content-container blog">
   <h1 class="section-title">{{ pageTitle }}</h1>
   <ul role="list" class="list">
-    {%- for post in collections.post | reverse -%}
+    {%- for post in collections.blog | reverse -%}
 
     {% include 'components/article-snippet.njk' %}
 
