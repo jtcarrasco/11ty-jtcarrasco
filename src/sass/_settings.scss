@@ -1,12 +1,20 @@
+//viewport size
+$vp-small				: 320px;
+$vp-mid					: 768px;
+$vp-large				: 1024px;
+$vp-max					: 1350px;
+
+$site-width				: $vp-large;
+
 //colors
 $jack-white: #d8dee9;
-$jack-white-1: #e5e9f0;
-$jack-white-2: #eceff4;
+$jack-white-one: #e5e9f0;
+$jack-white-two: #eceff4;
 
 $jack-black: #2e3440;
-$jack-black-2: #3b4252;
-$jack-black-3: #434c5e;
-$jack-black-4: #4c566a;
+$jack-black-two: #3b4252;
+$jack-black-three: #434c5e;
+$jack-black-four: #4c566a;
 
 $frost-one: #8fbcbb;
 $frost-two: #88c0d0;
@@ -19,11 +27,8 @@ $agent-orange: #d08770;
 $al-green: #a3be8c;
 $purple-rain: #b48ead;
 
-$vp-large: 1024px;
-$vp-mid: 768px;
-$vp-small: 320px;
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
-//text
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-$font-stack: 'Roboto Mono', monospace;
+$primary-font:    'Crimson Pro', serif;
+$secondary-font:  'Bree Serif', serif;

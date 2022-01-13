@@ -1,87 +1,89 @@
-p { line-height: 1.5rem; }
-
-.text-lg {
-  position: relative;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 44px;
-    background-color: $al-green;
-  }
-}
-
-//end of line
-
 //dark styling
 
 .dark-theme {
   color: $jack-white;
   background-color: $jack-black;
 
-  .sitenav-inner {
-    .logo { color: $jack-white; }
+  a { color: $agent-orange; }
 
-    .nav-list {
-      a { color: $jack-white; }
+  .sitenav {
+    border-color: $jack-white;
+    .sitenav-inner {
+      .logo { fill: $jack-white; }
+
+      .nav-list a { color: $jack-white; }
+
+      .night-mode-btn svg { fill: $jack-white; }
+
+      .link-btn { color: $jack-white; }
     }
-
-    .links { color: $jack-white }
-
-    .night-mode-btn {
-      color: $jack-white;
-      svg {
-        fill: $jack-white;
-      }
-    }
-
-    .link-btn { color: $jack-white; }
   }
 
-  .blog-single { color: $jack-white; }
-
-  .footer-inner {
-    .logo { fill: $jack-white; }
+  .footer {
+    border-color: $jack-white;
+    .footer-inner {
+      .social-nav .logo { fill: $jack-white; }
+    }
   }
 }
 
-//end of line
+
 
 body {
-  font: 100% $font-stack;
-  margin: 0;
-  padding: 0;
-  color: $jack-black;
-  background-color: $jack-white;
-  width: 100vw;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font: {
+    size: 1.13rem;
+    family: $primary-font;
+    weight: 400;
+  }
+  color: $jack-black;
+  background-color: $jack-white;
 
+
+/*************/
+///buttons
+/*************/
+
+  .btn {
+    cursor: pointer;
+    padding: 0.75em 1.75em;
+    border-radius: 0.25em;
+
+    &-primary {
+      align-self: flex-start;
+      background: $frost-two;
+      color: $jack-black;
+      font-weight: 700;
+      @include hover  {
+        text-decoration: none;
+        color: $jack-white-two;
+        background: $jack-black-four;
+      }
+    }
+  }
+
+/*************/
+//header
+/*************/
 
   .sitenav {
-    padding: 0.75rem;
-    border-style: solid;
-    border-width: 0px;
-    border-bottom-width: 1px;
+    width: 100%;
+    border-bottom: 1px dashed $jack-black;
 
     &-inner {
-      width: 50%;
-      margin-right: auto;
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      @include width-constrain;
+      @include flex-all($direction: column, $justify:center,$align:center);
+      padding: 0.75rem;
 
       .logo {
         margin: 0;
-        font-weight: bold;
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: $jack-black;
+        width: 60px;
+        fill: $jack-black;
       }
 
       .nav-list {
@@ -110,109 +112,124 @@ body {
       }
 
     }
-  }
-
-  main {
-    width: $vp-large;
-    margin-left: auto;
-    margin-right: auto;
-
-    a {
-      color: #14847E;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
+    @include respond-to($vp-mid) {
+      &-inner {
+        @include flex-all($direction: row, $justify:space-between);
       }
     }
   }
 
-  .article-wrapper {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+/*************/
+//content
+/*************/
 
-    a {
-      color: #14847E;
-      text-decoration: none;
+  #content_main {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-      &:hover {
-        text-decoration: underline;
+  .content-container {
+    @include width-constrain;
+    padding: 0.75rem;
+
+    .section-title {
+      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      font: {
+        family: $secondary-font;
+        weight: 700;
       }
     }
 
-    img {
-      width: 100%;
+    .section-large {
+      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      line-height: 2.5rem;
+    }
+
+    .section-text {
+      a {
+        &:nth-child(1) { color: $red-fox; }
+        &:nth-child(2) { color: $agent-orange; }
+        &:nth-child(3) { color: $al-green; }
+      }
     }
   }
+
+/*************/
+//blog
+/*************/
 
   .blog-list {
     display: grid;
     gap: 1rem;
 
-    a:hover {
-        text-decoration: none;
+    .articles-list {
+      @include width-constrain;
+      @include stripped-list;
+    }
+
+    .article {
+      @include flex-all($direction:column,$justify:space-between);
+      padding: 1em 0;
+      margin-bottom: 1em;
+      border-bottom: 1px dashed $jack-black;
+      &-title {
+        @include scale-font($small-ratio: .75, $final-size: 2rem);
+        padding: 0 0 1em 0;
+        margin: 0;
+        a {
+          color: $jack-black;
+          text-decoration: none;
+          @include hover  {
+            color: $al-green;
+          }
+        }
       }
+      &-image { border-radius: .25em; }
+      &-body {
+        padding: 1em 0;
+        font-size: 1.13rem;
+      }
+      // &:last-child {
+      //   border-bottom: 0px solid transparent;
+      // }
+    }
+
 
   }
 
-  .blog-single {
-    color: $jack-black;
-    border-bottom: {
-      style: solid;
-      width: 1px;
-    }
-    padding: 1rem;
-
-    .title {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .description {
-      margin-top: 1rem;
-    }
-  }
+/*************/
+//footer
+/*************/
 
   .footer {
-    padding: 0.75rem;
-    border-style: solid;
-    border-width: 0px;
-    border-top-width: 1px;
+    width: 100%;
+    border-top: 1px dashed $jack-black;
     &-inner {
-      width: 50%;
-      margin: {
-        left: auto;
-        right: auto;
+      @include width-constrain;
+      @include flex-all($direction: column, $align:center);
+      padding: 0.75rem;
+      .social-nav {
+        @include flex-all($justify:center,$align:center);
+        .logo {
+          width: 40px;
+          margin: 0 .5em;
+          fill: $jack-black;
+        }
       }
-      display: flex;
-      align-items: center;
-      .logo {
-        width: 40px;
-        margin: 0 .5em;
-        fill: $jack-black;
+      .copyright {
+        text-align: center;
       }
-      .copyright { margin-left: auto; }
     }
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  body {
-    nav {
-      width: 90%;
-    }
-
-    main {
-      width: 90%;
-    }
-
-    footer {
-      width: 90%;
+    @include respond-to($vp-mid) {
+      &-inner {
+        @include flex-all($direction: row, $justify:space-between);
+        .copyright { margin-left: auto; }
+      }
     }
   }
 }

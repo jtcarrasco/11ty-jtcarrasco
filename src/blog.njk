@@ -1,17 +1,16 @@
 ---
 title: "Jtcarrasco: Blog"
+pageTitle: "Blog"
 layout: "base.njk"
 ---
 
-{# <div>
-  <h1>Blog</h1>
-  <div class="blog-list">
-    {% for post in collections.post reversed %}
-      <a href='{{post.url}}' class="blog-single">
-        <p class="title">{{ post.data.title }}</p>
+<section class="content-container blog-list">
+  <h1 class="section-title">{{ pageTitle }}</h1>
+  <ul role="list" class="articles-list flow">
+    {%- for post in collections.post | reverse -%}
 
-        <p class="description">{{ post.data.description }}</p>
-      </a>
-    {% endfor %}
-  </div>
-</div> #}
+    {% include 'components/article-snippet.njk' %}
+
+    {%- endfor -%}
+  </ul>
+</section>
