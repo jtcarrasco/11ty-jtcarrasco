@@ -169,7 +169,8 @@ figcaption { @include hidden; }
 
       svg {
         fill: $jack-black;
-        width: 60px;
+        width: 40px;
+        height: auto;
       }
     }
 
