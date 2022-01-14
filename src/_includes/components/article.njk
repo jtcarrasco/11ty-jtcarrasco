@@ -1,0 +1,15 @@
+---
+layout: 'base.njk'
+---
+<div class="homepage-row">
+  <article class="article content-container">
+    <figure class="article-image">
+      <img src="{{ image }}" alt="{{ imageAlt}}">
+      <figcaption>{{ imageAlt }}</figcaption>
+    </figure>
+    <div class="article-summary my-link">
+      <h1 class="article-title">{{ title }}</h1>
+        {{ content | safe }}
+    </div>
+  </article>
+</div>

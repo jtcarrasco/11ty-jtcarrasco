@@ -58,7 +58,10 @@
   box-sizing: border-box;
 }
 
-.homepage-row { @include width-constrain; }
+.homepage-row {
+  @include width-constrain;
+  padding: 2.5rem 0;
+}
 
 .content-container {
   @include width-constrain;
@@ -67,7 +70,6 @@
   .section {
     &-title {
       @include scale-font($small-ratio: .75, $final-size: 2rem);
-      margin: 1.5em 0;
       font: {
         family: $secondary-font;
         weight: 700;
@@ -80,8 +82,17 @@
         weight: 700;
       }
     }
+    &-main-title {
+      @include scale-font($small-ratio: .75, $final-size: 2.5rem);
+      line-height: 2.5rem;
+      margin-bottom: 1em;
+    }
+    &-main {
+      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      line-height: 2.5rem;
+    }
     &-large {
-      @include scale-font($small-ratio: .75, $final-size: 1.8rem);
+      @include scale-font($small-ratio: .75, $final-size: 1.5rem);
       line-height: 2.5rem;
     }
     &-text { font-size: 1.13rem; }
@@ -116,6 +127,8 @@
     }
   }
 }
+
+figcaption { @include hidden; }
 
 
 /*************/
@@ -179,12 +192,10 @@
 
 #row_about {
   .article { display: flow-root; }
-  img {
-    max-width: 300px;
-  }
+  img { max-width: 300px; }
   @include respond-to($vp-mid) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     img {
       float: left;
       margin: 0 1em 1em 0;
@@ -201,8 +212,9 @@
 
 #homepage_projects {
   @include flex-all($direction:column);
-  grid-column: 3;
+  grid-column: 3 / span 1;
   .list-item { margin: .8em 0 0 0; }
+  .padding-above { margin: 1em 0; }
   @include respond-to($vp-mid) {
     margin: 2em 0;
     border-left: 1px $jack-black dashed;
@@ -241,6 +253,7 @@
   .article {
     @include flex-all($direction:column,$justify:center,$align:center);
     padding: 1em 0;
+
     &-summary {
       display: flex;
       flex-direction: column;
