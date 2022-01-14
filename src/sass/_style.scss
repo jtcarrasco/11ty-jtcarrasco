@@ -192,13 +192,16 @@ figcaption { @include hidden; }
 
 #row_about {
   .article { display: flow-root; }
-  img { max-width: 300px; }
+  img {
+    max-width: 300px;
+    margin-bottom: .5em;
+  }
   @include respond-to($vp-mid) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     img {
       float: left;
-      margin: 0 1em 1em 0;
+      margin-right: 1em;
     }
   }
 }
