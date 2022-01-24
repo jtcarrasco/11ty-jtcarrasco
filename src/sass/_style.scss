@@ -7,18 +7,24 @@
   #header {
     border-color: $jack-white;
     .sitenav-inner {
-      .logo { fill: $jack-white; }
+      .logo {
+        fill: $jack-white;
+      }
 
       .nav-list a {
         color: $jack-white;
-        @include hover  {
+        @include hover {
           color: $jack-black;
         }
       }
 
-      .night-mode-btn svg { fill: $jack-white; }
+      .night-mode-btn svg {
+        fill: $jack-white;
+      }
 
-      .link-btn { color: $jack-white; }
+      .link-btn {
+        color: $jack-white;
+      }
     }
   }
 
@@ -29,17 +35,20 @@
   }
 
   #blog {
-    .article-title a { color: $jack-white; }
+    .article-title a {
+      color: $jack-white;
+    }
     .article-item {
       border-color: $jack-white;
     }
   }
 
-
   #footer {
     border-color: $jack-white;
     .footer-inner {
-      .social-nav .logo { fill: $jack-white; }
+      .social-nav .logo {
+        fill: $jack-white;
+      }
     }
   }
 }
@@ -69,33 +78,35 @@
 
   .section {
     &-title {
-      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      @include scale-font($small-ratio: 0.75, $final-size: 2rem);
       font: {
         family: $secondary-font;
         weight: 700;
       }
     }
     &-title-sub {
-      @include scale-font($small-ratio: .75, $final-size: 1.13rem);
+      @include scale-font($small-ratio: 0.75, $final-size: 1.13rem);
       font: {
         family: $secondary-font;
         weight: 700;
       }
     }
     &-main-title {
-      @include scale-font($small-ratio: .75, $final-size: 2.5rem);
+      @include scale-font($small-ratio: 0.75, $final-size: 2.5rem);
       line-height: 2.5rem;
       margin-bottom: 1em;
     }
     &-main {
-      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      @include scale-font($small-ratio: 0.75, $final-size: 2rem);
       line-height: 2.5rem;
     }
     &-large {
-      @include scale-font($small-ratio: .75, $final-size: 1.5rem);
+      @include scale-font($small-ratio: 0.75, $final-size: 1.5rem);
       line-height: 2.5rem;
     }
-    &-text { font-size: 1.13rem; }
+    &-text {
+      font-size: 1.13rem;
+    }
   }
 }
 
@@ -108,7 +119,7 @@
   background: $red-fox;
   color: $jack-white;
   font-weight: 700;
-  @include hover  {
+  @include hover {
     color: $jack-black;
     background: $yellow-ono;
   }
@@ -116,7 +127,7 @@
 
 .my-link {
   a {
-    padding: 0 .08em;
+    padding: 0 0.08em;
     border-radius: 0.25em;
     text-decoration: none;
     font-weight: 700;
@@ -128,8 +139,9 @@
   }
 }
 
-figcaption { @include hidden; }
-
+figcaption {
+  @include hidden;
+}
 
 /*************/
 //header
@@ -141,7 +153,7 @@ figcaption { @include hidden; }
 
   .sitenav-inner {
     @include width-constrain;
-    @include flex-all($direction: column, $justify:center,$align:center);
+    @include flex-all($direction: column, $justify: center, $align: center);
     padding: 0.75rem;
 
     .logo {
@@ -173,11 +185,10 @@ figcaption { @include hidden; }
         height: auto;
       }
     }
-
   }
   @include respond-to($vp-mid) {
     .sitenav-inner {
-      @include flex-all($direction: row, $justify:space-between);
+      @include flex-all($direction: row, $justify: space-between);
     }
   }
 }
@@ -188,14 +199,18 @@ figcaption { @include hidden; }
 
 #row_main {
   align-items: flex-start;
-  .section-large:first-of-type { margin-bottom: 1.25em; }
+  .section-large:first-of-type {
+    margin-bottom: 1.25em;
+  }
 }
 
 #row_about {
-  .article { display: flow-root; }
+  .article {
+    display: flow-root;
+  }
   img {
     max-width: 300px;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
   @include respond-to($vp-mid) {
     display: grid;
@@ -208,17 +223,23 @@ figcaption { @include hidden; }
 }
 
 #homepage_content {
-  p { margin-bottom: 1.5em; }
+  p {
+    margin-bottom: 1.5em;
+  }
   @include respond-to($vp-mid) {
     grid-column: 1 / span 2;
   }
 }
 
 #homepage_projects {
-  @include flex-all($direction:column);
+  @include flex-all($direction: column);
   grid-column: 3 / span 1;
-  .list-item { margin: .8em 0 0 0; }
-  .padding-above { margin: 1em 0; }
+  .list-item {
+    margin: 0.8em 0 0 0;
+  }
+  .padding-above {
+    margin: 1em 0;
+  }
   @include respond-to($vp-mid) {
     margin: 2em 0;
     border-left: 1px $jack-black dashed;
@@ -229,7 +250,7 @@ figcaption { @include hidden; }
   .list {
     display: grid;
     .list-item a {
-      font-size: clamp(.75%, 2rem, 3rem);
+      font-size: clamp(0.75%, 2rem, 3rem);
       font: {
         family: $secondary-font;
         weight: 700;
@@ -237,7 +258,9 @@ figcaption { @include hidden; }
     }
   }
   @include respond-to($vp-mid) {
-    .list { grid-template-columns: repeat(2, 1fr); }
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -251,11 +274,13 @@ figcaption { @include hidden; }
 
   .article-item {
     border-bottom: 1px dashed $jack-black;
-    &:last-child { border-bottom: 0px dashed transparent;}
+    &:last-child {
+      border-bottom: 0px dashed transparent;
+    }
   }
 
   .article {
-    @include flex-all($direction:column,$justify:center,$align:center);
+    @include flex-all($direction: column, $justify: center, $align: center);
     padding: 1em 0;
 
     &-summary {
@@ -263,17 +288,19 @@ figcaption { @include hidden; }
       flex-direction: column;
     }
     &-title {
-      @include scale-font($small-ratio: .75, $final-size: 2rem);
+      @include scale-font($small-ratio: 0.75, $final-size: 2rem);
       margin: 0;
       a {
         color: $jack-black;
         text-decoration: none;
-        @include hover  {
+        @include hover {
           color: $al-green;
         }
       }
     }
-    &-image { border-radius: .25em; }
+    &-image {
+      border-radius: 0.25em;
+    }
     &-body {
       padding: 0 0 1em 0;
       font-size: 1.13rem;
@@ -281,9 +308,13 @@ figcaption { @include hidden; }
   }
   @include respond-to($vp-mid) {
     .article {
-      @include flex-all($direction:row,$align:flex-start);
-      &-image { max-width: $vp-small; }
-      &-summary { margin-left: 1em; }
+      @include flex-all($direction: row, $align: flex-start);
+      &-image {
+        max-width: $vp-small;
+      }
+      &-summary {
+        margin-left: 1em;
+      }
     }
   }
 }
@@ -297,13 +328,13 @@ figcaption { @include hidden; }
   border-top: 1px dashed $jack-black;
   .footer-inner {
     @include width-constrain;
-    @include flex-all($direction: column, $align:center);
+    @include flex-all($direction: column, $align: center);
     padding: 0.75rem;
     .social-nav {
-      @include flex-all($justify:center,$align:center);
+      @include flex-all($justify: center, $align: center);
       .logo {
         width: 40px;
-        margin: 0 .5em;
+        margin: 0 0.5em;
         fill: $jack-black;
       }
     }
@@ -313,8 +344,10 @@ figcaption { @include hidden; }
   }
   @include respond-to($vp-mid) {
     .footer-inner {
-      @include flex-all($direction: row, $justify:space-between);
-      .copyright { margin-left: auto; }
+      @include flex-all($direction: row, $justify: space-between);
+      .copyright {
+        margin-left: auto;
+      }
     }
   }
 }
