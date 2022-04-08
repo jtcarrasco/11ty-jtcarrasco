@@ -1,7 +1,7 @@
 ---
 title: Here is my New Website... it's purdy
 tags: blog
-image: /assets/_blog/11ty.png
+image: /assets/_blog/newsite.png
 imageAlt: 11ty
 description: I made a website! it's a long time coming but I finally got around to finishing it.
 ---

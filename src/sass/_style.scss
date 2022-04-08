@@ -14,7 +14,7 @@
       .nav-list a {
         color: $jack-white;
         @include hover {
-          color: $jack-black;
+          color: $jack-white;
         }
       }
 
@@ -31,6 +31,24 @@
   #homepage_projects {
     @include respond-to($vp-mid) {
       border-color: $jack-white;
+    }
+  }
+
+  .btn {
+    background: $agent-orange;
+    color: $jack-white;
+    @include hover {
+      background: $red-fox;
+    }
+  }
+
+  .my-link {
+    a {
+      color: $agent-orange;
+      @include hover {
+        color: $jack-white;
+        background-color: $red-fox;
+      }
     }
   }
 
@@ -93,6 +111,7 @@
     }
     &-main-title {
       @include scale-font($small-ratio: 0.75, $final-size: 2.5rem);
+      font-family: $secondary-font;
       line-height: 2.5rem;
       margin-bottom: 1em;
     }
@@ -116,25 +135,26 @@
   border-radius: 0.25em;
   align-self: flex-start;
   text-decoration: none;
-  background: $red-fox;
+  background: $nord-three;
   color: $jack-white;
   font-weight: 700;
   @include hover {
-    color: $jack-black;
-    background: $yellow-ono;
+    color: $jack-white;
+    background: $nord-four;
   }
 }
 
 .my-link {
   a {
-    padding: 0 0.08em;
+    position: relative;
+    padding: 0.12em;
     border-radius: 0.25em;
     text-decoration: none;
     font-weight: 700;
-    color: $red-fox;
+    color: $nord-four;
     @include hover {
-      color: $jack-black;
-      background-color: $yellow-ono;
+      color: $jack-white;
+      background-color: $nord-four;
     }
   }
 }
@@ -165,11 +185,13 @@ figcaption {
     .nav-list {
       display: flex;
       align-items: center;
-
       a {
+        color: $jack-black;
         margin-right: 2rem;
         text-decoration: none;
-        color: $jack-black;
+        @include hover  {
+          color: $jack-white;
+        }
       }
     }
 
@@ -249,12 +271,16 @@ figcaption {
 .homepage-lists {
   .list {
     display: grid;
-    .list-item a {
-      font-size: clamp(0.75%, 2rem, 3rem);
-      font: {
-        family: $secondary-font;
-        weight: 700;
+    .list-item {
+      padding: .5em;
+      a {
+        font-size: 1.25rem;
+        font: {
+          family: $secondary-font;
+          weight: 700;
+        }
       }
+      p { font-style: italic; }
     }
   }
   @include respond-to($vp-mid) {
@@ -310,7 +336,7 @@ figcaption {
     .article {
       @include flex-all($direction: row, $align: flex-start);
       &-image {
-        max-width: $vp-small;
+        max-width: 415px;
       }
       &-summary {
         margin-left: 1em;
