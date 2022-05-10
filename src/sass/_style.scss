@@ -185,6 +185,8 @@ figcaption {
     .nav-list {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       a {
         color: $jack-black;
         margin-right: 2rem;
@@ -335,6 +337,65 @@ figcaption {
   @include respond-to($vp-mid) {
     .article {
       @include flex-all($direction: row, $align: flex-start);
+      &-image {
+        max-width: 415px;
+      }
+      &-summary {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+/*************/
+//portfolio content
+/*************/
+
+#portfolio {
+  display: grid;
+  gap: 1rem;
+
+  .article-item {
+    margin: 0 .5em;
+    border-bottom: 1px dashed $jack-black;
+    &:last-child {
+      border-bottom: 0px dashed transparent;
+    }
+  }
+
+  .article {
+    @include flex-all($direction: column, $justify: center, $align: center);
+    padding: 1em 0;
+
+    &-summary {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      @include scale-font($small-ratio: 0.75, $final-size: 2rem);
+      margin: 0;
+      a {
+        color: $jack-black;
+        text-decoration: none;
+        @include hover {
+          color: $al-green;
+        }
+      }
+    }
+    &-image {
+      border-radius: 0.25em;
+    }
+    &-body {
+      padding: 0 0 1em 0;
+      font-size: 1.13rem;
+    }
+  }
+  @include respond-to($vp-mid) {
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .article {
       &-image {
         max-width: 415px;
       }
