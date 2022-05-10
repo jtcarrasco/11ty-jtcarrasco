@@ -1,9 +1,9 @@
 ---
-title: This is a portfolio item
+title: Rowland Unified School District
 tags: portfolio
-image: /assets/_blog/newsite.png
+image: /assets/_img/rowland.png
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: Rowland Unified School District
 ---
 
 hey it's a portfolio deal

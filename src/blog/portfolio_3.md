@@ -1,7 +1,7 @@
 ---
 title: This is a portfolio item
 tags: portfolio
-image: /assets/_blog/newsite.png
+image: /assets/_img/newsite.png
 imageAlt: 11ty
 description: Portfolio portfolio portfolio
 ---
