@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: St. Charles Borromeo Parish School
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/borromeo.jpg
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: St. Charles Borromeo Parish School
 ---
 
-hey it's a portfolio deal
+This was a redesign of [St. Charles Borromeo Parish School](https://www.scb.school/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)

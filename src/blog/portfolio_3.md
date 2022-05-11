@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: Xavier High School
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/xavier.jpg
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: Xavier High School redesign
 ---
 
-hey it's a portfolio deal
+This was a redesign of [Xavier High School](https://www.xavierhighschool.org/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)

@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: Lumin Schools
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/lumin.jpg
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: Lumin Schools
 ---
 
-hey it's a portfolio deal
+This was a redesign of [Lumin Schools](https://www.luminschools.org/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)

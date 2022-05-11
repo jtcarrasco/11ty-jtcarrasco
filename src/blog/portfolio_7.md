@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: Medina Valley Independent School District
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/medina.jpg
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: Medina Valley Independent School District
 ---
 
-hey it's a portfolio deal
+This was a redesign of [Medina Valley Independent School District](https://www.mvisd.com/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)

@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: Seton LaSalle Catholic High School
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/lasalle.jpg
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: Seton LaSalle Catholic High School
 ---
 
-hey it's a portfolio deal
+This was a redesign of [Seton LaSalle Catholic High School](https://www.slshs.org/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)

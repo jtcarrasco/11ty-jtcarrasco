@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: Urban Discovery Schools
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/urban.jpg
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: Urban Discovery Schools redesign
 ---
 
-hey it's a portfolio deal
+This was a redesign of [Urban Discovery Schools](https://www.urbansd.com/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)

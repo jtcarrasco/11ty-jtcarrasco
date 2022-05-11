@@ -1,9 +1,13 @@
 ---
-title: This is a portfolio item
+title: North Bergen School District
 tags: portfolio
-image: /assets/_img/newsite.png
+image: /assets/_img/bergen.png
 imageAlt: 11ty
-description: Portfolio portfolio portfolio
+description: North Bergen School District
 ---
 
-hey it's a portfolio deal
+This was a redesign of [North Bergen School District](https://www.northbergen.k12.nj.us/) done in 2021.
+
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
+![this is the image](/assets/_img/catarm.jpg)
