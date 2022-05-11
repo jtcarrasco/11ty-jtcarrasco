@@ -8,6 +8,8 @@ description: El Rancho School District redesign
 
 This was a redesign of [El Rancho Unified School District](https://www.erusd.org/) done in 2021.
 
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
+<div class="imageBlock">
+  <img src="/assets/_img/catarm.jpg">
+  <img src="/assets/_img/catarm.jpg">
+  <img src="/assets/_img/catarm.jpg">
+</div>

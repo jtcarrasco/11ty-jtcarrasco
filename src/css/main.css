@@ -427,6 +427,16 @@ figcaption {
 
 /*************/
 /*************/
+#article_detail .imageBlock {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+  margin: 1em 0; }
+  #article_detail .imageBlock img:nth-child(3) {
+    grid-column: 1 /  span 2; }
+
+/*************/
+/*************/
 #footer {
   width: 100%;
   border-top: 1px dashed #1F1F1F; }
