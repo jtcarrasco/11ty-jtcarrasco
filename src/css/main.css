@@ -201,12 +201,8 @@ select {
     background: #5e81ac; }
 
 .my-link a {
-<<<<<<< HEAD
   position: relative;
   padding: 0.12em;
-=======
-  padding: 0 0.08em;
->>>>>>> 6142f0e588395d2432bcd51052009f2c0098ff76
   border-radius: 0.25em;
   text-decoration: none;
   font-weight: 700;
@@ -395,11 +391,7 @@ figcaption {
       #footer .footer-inner .social-nav .logo {
         width: 40px;
         margin: 0 0.5em;
-<<<<<<< HEAD
         fill: #1F1F1F; }
-=======
-        fill: #000000; }
->>>>>>> 6142f0e588395d2432bcd51052009f2c0098ff76
     #footer .footer-inner .copyright {
       text-align: center; }
   @media screen and (min-width: 768px) {
