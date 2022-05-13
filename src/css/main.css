@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Patua+One&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -38,7 +38,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 1.13rem;
-  font-family: "Crimson Pro", serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   color: #1F1F1F;
   background-color: #fffffa; }
@@ -139,7 +139,7 @@ select {
   padding: 0.75rem; }
   .content-container .section-title {
     font-size: 1.5rem;
-    font-family: "Bree Serif", serif;
+    font-family: "Patua One", cursive;
     font-weight: 700; }
     @media screen and (min-width: 768px) {
       .content-container .section-title {
@@ -149,7 +149,7 @@ select {
         font-size: 2rem; } }
   .content-container .section-title-sub {
     font-size: 0.8475rem;
-    font-family: "Bree Serif", serif;
+    font-family: "Patua One", cursive;
     font-weight: 700; }
     @media screen and (min-width: 768px) {
       .content-container .section-title-sub {
@@ -159,7 +159,7 @@ select {
         font-size: 1.13rem; } }
   .content-container .section-main-title {
     font-size: 1.875rem;
-    font-family: "Bree Serif", serif;
+    font-family: "Patua One", cursive;
     line-height: 2.5rem;
     margin-bottom: 1em; }
     @media screen and (min-width: 768px) {
@@ -317,7 +317,7 @@ figcaption {
     padding: .5em; }
     .homepage-lists .list .list-item a {
       font-size: 1.25rem;
-      font-family: "Bree Serif", serif;
+      font-family: "Patua One", cursive;
       font-weight: 700; }
     .homepage-lists .list .list-item p {
       font-style: italic; }
