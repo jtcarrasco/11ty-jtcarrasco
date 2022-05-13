@@ -1,12 +1,12 @@
 ---
-title: Edlio Blog Site
+title: Lumin Schools
 tags: portfolio
-image: /assets/_img/blog.png
+image: /assets/_img/lumin.jpg
 imageAlt: 11ty
-description: Edlio Blog Site
+description: Lumin Schools
 ---
 
-This was a redesign of [Edlio Blog Site](https://www.blog.edlio.com/) done in 2021.
+This was a redesign of [Lumin Schools](https://www.luminschools.org/) done in 2021.
 
 ![this is the image](/assets/_img/catarm.jpg)
 ![this is the image](/assets/_img/catarm.jpg)

@@ -1,0 +1,16 @@
+---
+title: "Jtcarrasco: Work"
+pageTitle: "Work"
+layout: "base.njk"
+---
+
+<section id="portfolio" class="content-container portfolio">
+  <h1 class="section-main-title">{{ pageTitle }}</h1>
+  <ul role="list" class="list">
+    {%- for post in collections.portfolio -%}
+
+    {% include 'components/portfolio-snippet.njk' %}
+
+    {%- endfor -%}
+  </ul>
+</section>
