@@ -7,7 +7,3 @@ description: St. Charles Borromeo Parish School
 ---
 
 This was a redesign of [St. Charles Borromeo Parish School](https://www.scb.school/) done in 2021.
-
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)

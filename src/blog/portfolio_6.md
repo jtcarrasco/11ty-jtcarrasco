@@ -7,7 +7,3 @@ description: Lumin Schools
 ---
 
 This was a redesign of [Lumin Schools](https://www.luminschools.org/) done in 2021.
-
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)

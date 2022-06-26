@@ -7,7 +7,3 @@ description: Rowland Unified School District
 ---
 
 This was a redesign of [Rowland Unified School District](https://www.rowlandschools.org/) done in 2021.
-
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)

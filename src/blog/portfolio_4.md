@@ -7,7 +7,3 @@ description: Urban Discovery Schools redesign
 ---
 
 This was a redesign of [Urban Discovery Schools](https://www.urbansd.com/) done in 2021.
-
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
-![this is the image](/assets/_img/catarm.jpg)
