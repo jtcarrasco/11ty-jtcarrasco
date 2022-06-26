@@ -6,4 +6,4 @@ imageAlt: 11ty
 description: Edlio Blog Site
 ---
 
-This was a redesign of [Edlio Blog Site](https://www.blog.edlio.com/) done in 2021.
+This was a redesign of [Edlio Blog Site](https://blog.edlio.com/) done in 2021.

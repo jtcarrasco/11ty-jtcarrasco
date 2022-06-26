@@ -6,4 +6,4 @@ imageAlt: 11ty
 description: Edlio Demo Sales Site
 ---
 
-This was a redesign of [Edlio Demo Sales Site](https://www.miguel.edlio.com/) done in 2021.
+This was a redesign of [Edlio Demo Sales Site](https://miguel.edlio.com/) done in 2021.
