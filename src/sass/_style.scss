@@ -417,25 +417,6 @@ figcaption {
 }
 
 /*************/
-<<<<<<< HEAD
-=======
-//article detail
-/*************/
-
-#article_detail {
-  .imageBlock {
-    display: grid;
-    //grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: auto auto;
-    gap: 1em;
-    margin: 1em 0;
-    img:nth-child(3) { grid-column: 1 /  span 2; }
-  }
-}
-
-
-/*************/
->>>>>>> 0fddb6742223bf4bcb3caf74d3ca669b4b9d60a6
 //footer
 /*************/
 
